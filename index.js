@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import { connectDB } from "./config/dbConfig.js";
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
 
@@ -19,6 +20,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send({message: "API is running...."});
 })
+
+
+app.use("/api/auth", userRoutes);
 
 
 app.listen(PORT, () => {
