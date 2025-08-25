@@ -26,7 +26,6 @@ export const registerUser = async(req, res) => {
 
         await newUser.save();
 
-          await registerEmail(email, name)
 
         return res.status(201).json({message: "user Registered Successfully", success: true});
 
