@@ -15,8 +15,8 @@ const fileSchema = new mongoose.Schema({
         ref: "User",
     },
     expiryTime: {
-        type: Number,
-        
+        type: Date,
+        required: true,
     },
     downloadCount: {
         type: Number,
